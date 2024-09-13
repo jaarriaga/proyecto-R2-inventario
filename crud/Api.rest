@@ -1,0 +1,86 @@
+### Productos
+
+# Obtener todos los productos
+GET http://localhost:3000/api/productos
+Content-Type: application/json
+
+###
+
+# Obtener un producto por ID (cambia {id} por el id del producto)
+GET http://localhost:3000/api/productos/1
+Content-Type: application/json
+
+###
+
+# Crear un nuevo producto
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "descripcion": "Producto nuevo",
+  "precio_unitario": 50.75,
+  "existencias": 100,
+  "categoria": "Electrónica"
+}
+
+###
+
+# Actualizar un producto existente (cambia {id} por el id del producto)
+PUT http://localhost:3000/api/productos/1
+Content-Type: application/json
+
+{
+  "descripcion": "Producto actualizado",
+  "precio_unitario": 45.00,
+  "existencias": 120,
+  "categoria": "Electrónica"
+}
+
+###
+
+# Eliminar un producto (cambia {id} por el id del producto)
+DELETE http://localhost:3000/api/productos/1
+Content-Type: application/json
+
+###
+
+### Entradas
+
+# Obtener todas las entradas
+GET http://localhost:3000/api/entradas
+Content-Type: application/json
+
+###
+
+# Crear una nueva entrada
+POST http://localhost:3000/api/entradas
+Content-Type: application/json
+
+{
+  "id_producto": 1,
+  "cantidad": 50,
+  "fecha_entrada": "2023-09-11"
+}
+
+###
+
+### Salidas
+
+# Obtener todas las salidas
+GET http://localhost:3000/api/salidas
+Content-Type: application/json
+
+###
+
+# Crear una nueva salida
+POST http://localhost:3000/api/salidas
+Content-Type: application/json
+
+{
+  "id_producto": 1,
+  "cantidad": 20,
+  "fecha_salida": "2023-09-12"
+}
+
+
+
